@@ -141,7 +141,7 @@ const Articles = () => {
     setArticles(res.data);
   };
 
-  const handleDelete = async (id) => {
+    const handleDelete = async (id) => {
     if (!confirm('Are you sure to delete this article?')) return;
     await axios.delete(`/admin/articles/delete/${selectedCategory}/${id}`);
     const res = await axios.get(`/admin/articles/fetch/${selectedCategory}`);
@@ -162,7 +162,7 @@ const Articles = () => {
   return (
     <AdminLayout>
       <div className="p-6">
-        <h1 className="text-2xl font-bold mb-4 text-gray-800">Articlaes Management</h1>
+        <h1 className="text-2xl font-bold mb-4 text-gray-800">Articles Management</h1>
 
        <select
   className="border border-gray-300 px-4 py-2 rounded-lg bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200 text-gray-700 w-full mb-4"
